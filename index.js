@@ -14,13 +14,34 @@ const namber = (n = getRandomInt(4, 100)) => {
 };
 // 2
 class Student {
-  constructor(firstName, lastName, { phome, eMail } = contacts, university) {
+  constructor(
+    firstName,
+    lastName,
+    { phome, eMail } = contacts,
+    university,
+    faculty,
+    department
+  ) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.contacts = contacts;
     this.university = university;
     this.faculty = faculty;
     this.department = department;
+  }
+  allInfo() {
+    const arr = [];
+    arr.push(
+      firstName,
+      lastName,
+      contacts.phome,
+      contacts.eMail,
+      university,
+      faculty,
+      department.departmentName,
+      department.headOfDepartment
+    );
+    return arr
   }
 }
 
